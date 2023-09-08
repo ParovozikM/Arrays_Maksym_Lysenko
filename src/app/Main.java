@@ -18,5 +18,22 @@ public class Main {
         }
 
 
+        int foundIndex = -1;
+
+        for (int i = 0; i < products.length; i++) {
+            if (products[i].equalsIgnoreCase(searchItem)) {
+                foundIndex = i;
+                break;
+            }
+        }
+
+        if (foundIndex != -1) {
+            System.out.println("Product '" + searchItem + "' found under the number " + (foundIndex + 1));
+        } else {
+            System.out.println("Product '" + searchItem + "' not found in the product list.");
+        }
+    }
+}
+
 
 
